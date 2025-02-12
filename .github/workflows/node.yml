@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        mongodb-version: ["8.2"]
+        mongodb-version: ["8"]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "22.2"
-      - name: Use MongoDB from Github actions
+      - name: Use MongoDB from GitHub actions
         uses: supercharge/mongodb-github-action@1.12.0
         with:
           mongodb-version: ${{ matrix.mongodb-version}}
